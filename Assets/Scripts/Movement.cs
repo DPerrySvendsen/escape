@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-  public float movementSpeed;
-  public float rotationSpeed;
-  public float rotationSensitivityX;
-  public float rotationBoundsY;
+  public float movementSpeed        = 5;
+  public float rotationSpeedX       = 5;
+  public float rotationSensitivityX = 0.5f;
+  public float rotationBoundsY      = 75;
+  public float rotationSmoothingY   = 0.05f;
 
   public float mouseOffsetX;
   public float mouseOffsetY;
@@ -23,7 +24,7 @@ public class Movement : MonoBehaviour {
     mouseOffsetY = (Input.mousePosition.y - Screen.height / 2) / Screen.height * 2;
     
     if (Mathf.Abs(mouseOffsetX) > rotationSensitivityX) {
-      mouseOffsetX = (mouseOffsetX - rotationSensitivityX * Mathf.Sign(mouseOffsetX));
+      mouseOffsetX = (mouseOffsetX - rotationSensitivityX * Mathf.Sign(mouseOffsetX)) * 2f;
     }
     else {
       mouseOffsetX = 0;
@@ -32,11 +33,15 @@ public class Movement : MonoBehaviour {
     transform.RotateAround(
       transform.position,
       transform.up,
-      mouseOffsetX * rotationSpeed
+      mouseOffsetX * rotationSpeedX
     );
 
     Camera.main.transform.localEulerAngles = new Vector3(
-      -mouseOffsetY * rotationBoundsY,
+      Mathf.LerpAngle(
+        Camera.main.transform.localEulerAngles.x,
+        -mouseOffsetY * rotationBoundsY,
+        rotationSmoothingY
+      ),
       0.0f,
       0.0f
     );

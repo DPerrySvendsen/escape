@@ -2198,9 +2198,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  rotationSpeed: 8
-  rotationSensitivityX: 0.2
+  rotationSpeedX: 3
+  rotationSensitivityX: 0.6
   rotationBoundsY: 75
+  rotationSmoothingY: 0.05
   mouseOffsetX: 0
   mouseOffsetY: 0
 --- !u!4 &932964413
