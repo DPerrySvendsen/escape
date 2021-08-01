@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SelectableObject : MonoBehaviour {
 
   public string description;
+  public UnityEvent interactionEvent;
 
   private bool isSelected;
   private MeshRenderer meshRenderer;
@@ -25,7 +27,7 @@ public class SelectableObject : MonoBehaviour {
     }
     set {
       isSelected = value;
-      meshRenderer.materials = isSelected ? selectedMaterials : originalMaterials;
+      meshRenderer.materials = isSelected && HasInteractionEvent ? selectedMaterials : originalMaterials;
     }
   }
 
@@ -37,6 +39,21 @@ public class SelectableObject : MonoBehaviour {
       else { 
         return "Error: Description for GameObject " + name + " not found.";
       }
+    }
+    set {
+      description = value;
+    }
+  }
+
+  private bool HasInteractionEvent {
+    get {
+      return interactionEvent.GetPersistentEventCount() > 0;
+    }
+  }
+
+  public void Interact () {
+    if (HasInteractionEvent) {
+      interactionEvent.Invoke();
     }
   }
 }

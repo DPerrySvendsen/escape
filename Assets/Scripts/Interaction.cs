@@ -4,7 +4,7 @@ public class Interaction : MonoBehaviour {
 
   public int raycastLength;
 
-  private SelectableObject previousSelection;
+  private SelectableObject currentSelection;
 
   public void Update () {
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -15,27 +15,31 @@ public class Interaction : MonoBehaviour {
         SelectObject(selectableObject);
       }
       else {
-        CancelPreviousSelection();
+        CancelSelection();
       }
     }
     else {
-      CancelPreviousSelection();
+      CancelSelection();
+    }
+
+    if (Input.GetMouseButtonDown(0) && currentSelection) {
+      currentSelection.Interact();
     }
   }
 
   private void SelectObject (SelectableObject selectableObject) {
-    if (selectableObject != previousSelection) {
-      CancelPreviousSelection();
+    if (selectableObject != currentSelection) {
+      CancelSelection();
       selectableObject.IsSelected = true;
       Camera.main.GetComponent<HUD>().DisplayMessage(selectableObject.Description);
-      previousSelection = selectableObject;
+      currentSelection = selectableObject;
     }
   }
 
-  private void CancelPreviousSelection () {
-    if (previousSelection) {
-      previousSelection.IsSelected = false;
-      previousSelection = null;
+  private void CancelSelection () {
+    if (currentSelection) {
+      currentSelection.IsSelected = false;
+      currentSelection = null;
     }
   }
 
