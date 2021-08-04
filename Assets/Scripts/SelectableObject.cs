@@ -7,18 +7,13 @@ public class SelectableObject : MonoBehaviour {
   public UnityEvent interactionEvent;
 
   private bool isSelected;
-  private MeshRenderer meshRenderer;
-
-  private Material[] originalMaterials;
-  private Material[] selectedMaterials;
+  private Outline outline;
 
   public void Start () {
-    meshRenderer = GetComponent<MeshRenderer>();
-    originalMaterials = meshRenderer.materials;
-    selectedMaterials = meshRenderer.materials;
-    for (int i = 0; i < selectedMaterials.Length; i++) {
-      selectedMaterials[i] = Resources.Load<Material>("Materials/Selected");
-    }
+    outline = gameObject.AddComponent<Outline>();
+    outline.OutlineColor = HasInteractionEvent ? Color.cyan : Color.white;
+    outline.OutlineWidth = 5f;
+    outline.enabled = false;
   }
 
   public bool IsSelected {
@@ -27,7 +22,7 @@ public class SelectableObject : MonoBehaviour {
     }
     set {
       isSelected = value;
-      meshRenderer.materials = isSelected && HasInteractionEvent ? selectedMaterials : originalMaterials;
+      outline.enabled = isSelected;
     }
   }
 

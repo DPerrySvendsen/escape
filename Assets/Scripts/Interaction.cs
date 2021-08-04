@@ -6,10 +6,15 @@ public class Interaction : MonoBehaviour {
 
   private SelectableObject currentSelection;
 
+  private bool canInteract = true;
+
   public void Update () {
-    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    if (!canInteract) {
+      return;
+    }
+
     RaycastHit hit;
-    if (Physics.Raycast(ray, out hit, raycastLength)) {
+    if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, raycastLength)) {
       SelectableObject selectableObject = hit.collider.GetComponent<SelectableObject>();
       if (selectableObject) {
         SelectObject(selectableObject);
@@ -40,6 +45,18 @@ public class Interaction : MonoBehaviour {
     if (currentSelection) {
       currentSelection.IsSelected = false;
       currentSelection = null;
+    }
+  }
+
+  public bool CanInteract {
+    get {
+      return canInteract;
+    }
+    set {
+      canInteract = value;
+      if (!canInteract) {
+        CancelSelection();
+      }
     }
   }
 
