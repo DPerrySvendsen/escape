@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 public class Keypad : MonoBehaviour {
 
+  public string passcode;
+  public OpenDoor door;
+
   public BoxCollider buttonA;
   public BoxCollider buttonB;
   public BoxCollider buttonC;
@@ -24,12 +27,18 @@ public class Keypad : MonoBehaviour {
   private bool isInteracting = false;
 
   private string combination;
+  private SelectableObject selectable;
 
   public void Start () {
+    selectable = GetComponent<SelectableObject>();
     SetButtonsEnabled(isInteracting);
   }
 
   private void SetButtonsEnabled (bool isEnabled) {
+    selectable.enabled = !isEnabled;
+    if (isEnabled && selectable.IsSelected) {
+      selectable.IsSelected = false;
+    }
     buttonA.enabled = isEnabled;
     buttonB.enabled = isEnabled;
     buttonC.enabled = isEnabled;
@@ -48,9 +57,18 @@ public class Keypad : MonoBehaviour {
   }
 
   public void Interact () {
-    isInteracting = true;
+    SetInteracting(true);
+  }
+
+  private void CancelInteract () {
+    combination = "";
+    display.text = combination;
+    SetInteracting(false);
+  }
+
+  private void SetInteracting (bool value) {
+    isInteracting = value;
     SetButtonsEnabled(isInteracting);
-    GameObject.FindGameObjectWithTag("Player").GetComponent<Interaction>().CanInteract = !isInteracting;
   }
 
   private string GetButtonCharacter (Collider collider) {
@@ -71,20 +89,26 @@ public class Keypad : MonoBehaviour {
   }
 
   public void Update () {
-    if (Input.GetMouseButtonDown(0)) {
+    if (isInteracting && Input.GetMouseButtonDown(0)) {
       RaycastHit hit;
       if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)) {
-        combination += GetButtonCharacter(hit.collider);
+        if (hit.collider == buttonOK && combination == passcode) {
+          isInteracting = false;
+          CancelInteract();
+          door.Open();
+        }
+        else if (hit.collider == buttonClear || hit.collider == buttonOK) {
+          combination = "";
+        }
+        else {
+          combination += GetButtonCharacter(hit.collider);
+        }
         display.text = combination;
       }
     }
 
     if (isInteracting && Input.GetMouseButtonDown(1)) {
-      combination = "";
-      display.text = combination;
-      isInteracting = false;
-      SetButtonsEnabled(isInteracting);
-      GameObject.FindGameObjectWithTag("Player").GetComponent<Interaction>().CanInteract = !isInteracting;
+      CancelInteract();
     }
   }
 }

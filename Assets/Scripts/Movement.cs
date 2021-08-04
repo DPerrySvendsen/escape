@@ -130,6 +130,7 @@ public class Movement : MonoBehaviour {
 
     if (spaceType == SpaceType.Local && targetCameraPosition == Vector3.zero) {
       movementEnabled = true;
+      GetComponent<Interaction>().CanInteract = true;
     }
     cameraCoroutine = null;
   }

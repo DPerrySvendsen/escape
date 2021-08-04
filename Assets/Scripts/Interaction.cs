@@ -16,7 +16,7 @@ public class Interaction : MonoBehaviour {
     RaycastHit hit;
     if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, raycastLength)) {
       SelectableObject selectableObject = hit.collider.GetComponent<SelectableObject>();
-      if (selectableObject) {
+      if (selectableObject && selectableObject.enabled) {
         SelectObject(selectableObject);
       }
       else {
