@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7332937, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -547,7 +547,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum Sid Dolor Amet
+  m_Text: Dedicated to Whiskers, supreme ruler of this household since 2011.
 --- !u!222 &66738228
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A wooden plaque attached to a framed photograph.
+  description: A small wooden plaque.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7332937, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1158,7 +1158,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum Sid Dolor Amet
+  m_Text: Our Milky Way galaxy, thought to be home to 400 billion stars
 --- !u!222 &204319956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1205,8 +1205,6 @@ Transform:
   - {fileID: 1415542724}
   - {fileID: 1160530098}
   - {fileID: 188799007}
-  - {fileID: 940266213}
-  - {fileID: 1978031051}
   - {fileID: 295482992}
   m_Father: {fileID: 226121561}
   m_RootOrder: 1
@@ -1296,7 +1294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7332937, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1316,7 +1314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum Sid Dolor Amet
+  m_Text: Original photograph from the Apollo 11 lunar mission, 20th July, 1969.
 --- !u!222 &233776484
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2656,7 +2654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A wooden plaque attached to a framed photograph.
+  description: A small wooden plaque.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3013,7 +3011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7627061603687514408, guid: eff63ebf138a9d743bef3e46ae0e64af, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7627061603687514408, guid: eff63ebf138a9d743bef3e46ae0e64af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3850,123 +3848,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &854239797
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 218967579}
-    m_Modifications:
-    - target: {fileID: 1466551327114840, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Name
-      value: Painting
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23338643888078432, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0311cbb0184a51845912c30ec478cb8e, type: 2}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.z
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Extents.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Extents.y
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Extents.z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Size.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Size.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Size.z
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.z
-      value: 0.04
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
 --- !u!1001 &903411164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4218,7 +4099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A painting of the NASA Curiosity rover on the surface of Mars.
+  description: A framed photograph.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4268,7 +4149,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5170fcb25e2eb5e4a848c56be85799c3, type: 2}
+  - {fileID: 2100000, guid: c7494cb17f3db31438355aa19dd0b30c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4685,32 +4566,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
---- !u!1 &940266212 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1466551327114840, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-  m_PrefabInstance: {fileID: 2060374288}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &940266213 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-  m_PrefabInstance: {fileID: 2060374288}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &940266214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940266212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: A painting of a ___.
-  interactionEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &956320784
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,7 +4627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A painting of the NASA Curiosity rover on the surface of Mars.
+  description: A framed photograph.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4822,7 +4677,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5170fcb25e2eb5e4a848c56be85799c3, type: 2}
+  - {fileID: 2100000, guid: d5157f5fd8700824baaab253cab72994, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5842,7 +5697,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5170fcb25e2eb5e4a848c56be85799c3, type: 2}
+  - {fileID: 2100000, guid: 333e9b03be50ffe45a6c8286c55442d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5884,7 +5739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A painting of the NASA Curiosity rover on the surface of Mars.
+  description: A framed photograph.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -6526,7 +6381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7332937, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6546,7 +6401,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum Sid Dolor Amet
+  m_Text: At 859 kg, NASA's Curiosity rover was truly a feat of human engineering.
 --- !u!222 &1123594591
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6884,7 +6739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A wooden plaque attached to a framed photograph.
+  description: A small wooden plaque.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -7225,7 +7080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A painting of the NASA Curiosity rover on the surface of Mars.
+  description: A framed photograph.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -7275,7 +7130,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5170fcb25e2eb5e4a848c56be85799c3, type: 2}
+  - {fileID: 2100000, guid: 8b3c24800e45d3d4881e10cc90194f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7490,7 +7345,7 @@ MonoBehaviour:
   button4Down: {fileID: 641658305}
   display: {fileID: 1093161421}
   openDraw: {fileID: 45270796}
-  correctCombination: 01000000020000000300000004000000
+  correctCombination: 01000000010000000500000002000000
   drawBehind: {fileID: 45270801}
 --- !u!1001 &1364715908
 PrefabInstance:
@@ -7890,7 +7745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A wooden plaque attached to a framed photograph.
+  description: A small wooden plaque.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -8187,7 +8042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7332937, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8207,7 +8062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum Sid Dolor Amet
+  m_Text: Joey lounging in the sun, circa 1998. He was a good boy.
 --- !u!222 &1502741559
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8586,7 +8441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7332937, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8606,7 +8461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum Sid Dolor Amet
+  m_Text: Whiskers Junior on his second birthday (60 in rat years!)
 --- !u!222 &1591708401
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8839,7 +8694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A wooden plaque attached to a framed photograph.
+  description: A small wooden plaque.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9968,7 +9823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A wooden plaque attached to a framed photograph.
+  description: A small wooden plaque.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -10122,7 +9977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A painting of the NASA Curiosity rover on the surface of Mars.
+  description: A framed photograph.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -10172,7 +10027,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5170fcb25e2eb5e4a848c56be85799c3, type: 2}
+  - {fileID: 2100000, guid: f118af820aab63c479aa1658f0eb52aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10555,32 +10410,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c8b047a2c0cdf442a97847b15e17227, type: 3}
---- !u!1 &1978031050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1466551327114840, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-  m_PrefabInstance: {fileID: 854239797}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1978031051 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-  m_PrefabInstance: {fileID: 854239797}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1978031052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978031050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: A painting of a ___.
-  interactionEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2026423988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1191596092261060, guid: 548b55d3e2f945942be6ac7612199877, type: 3}
@@ -10682,7 +10511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A painting of the NASA Curiosity rover on the surface of Mars.
+  description: A framed photograph.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -10762,123 +10591,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050218670}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &2060374288
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 218967579}
-    m_Modifications:
-    - target: {fileID: 1466551327114840, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Name
-      value: Painting
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268489408920228, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23338643888078432, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0311cbb0184a51845912c30ec478cb8e, type: 2}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.z
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Extents.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Extents.y
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 208004200151444284, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Extents.z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Size.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Size.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Size.z
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225916703280627768, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
-      propertyPath: m_Center.z
-      value: 0.04
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 106e0f600ce0361469ff2428db6b7abc, type: 3}
 --- !u!1001 &2077161253
 PrefabInstance:
   m_ObjectHideFlags: 0
