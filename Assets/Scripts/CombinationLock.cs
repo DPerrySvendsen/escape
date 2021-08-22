@@ -77,28 +77,28 @@ public class CombinationLock : MonoBehaviour {
 
   private void UpdateCombination (Collider collider) {
     if (collider == button1Up) {
-      combination[0] = (combination[0] + 1) % 10;
+      combination[0] = Mathf.Min(9, combination[0] + 1);
     }
     else if (collider == button2Up) {
-      combination[1] = (combination[1] + 1) % 10;
+      combination[1] = Mathf.Min(9, combination[1] + 1);
     }
     else if (collider == button3Up) {
-      combination[2] = (combination[2] + 1) % 10;
+      combination[2] = Mathf.Min(9, combination[2] + 1);
     }
     else if (collider == button4Up) {
-      combination[3] = (combination[3] + 1) % 10;
+      combination[3] = Mathf.Min(9, combination[3] + 1);
     }
     else if (collider == button1Down) {
-      combination[0] = (combination[0] - 1) % 10;
+      combination[0] = Mathf.Max(0, combination[0] - 1);
     }
     else if (collider == button2Down) {
-      combination[1] = (combination[1] - 1) % 10;
+      combination[1] = Mathf.Max(0, combination[1] - 1);
     }
     else if (collider == button3Down) {
-      combination[2] = (combination[2] - 1) % 10;
+      combination[2] = Mathf.Max(0, combination[2] - 1);
     }
     else if (collider == button4Down) {
-      combination[3] = (combination[3] - 1) % 10;
+      combination[3] = Mathf.Max(0, combination[3] - 1);
     }
     UpdateDisplay();
   }
@@ -114,6 +114,7 @@ public class CombinationLock : MonoBehaviour {
           isInteracting = false;
           CancelInteract();
           openDraw.Open();
+          openDraw.GetComponent<BoxCollider>().enabled = false;
         };
       }
     }

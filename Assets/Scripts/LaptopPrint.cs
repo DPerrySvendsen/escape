@@ -5,6 +5,8 @@ public class LaptopPrint : MonoBehaviour {
 
   public Text screenText;
   public InputField input;
+  public Animator printerPaper;
+  public CloserLook closerLook;
 
   private string prompt;
   private bool isInteracting;
@@ -25,6 +27,7 @@ public class LaptopPrint : MonoBehaviour {
 
   public void Start () {
     prompt = screenText.text;
+    printerPaper.speed = 0;
   }
 
   public void Update () {
@@ -33,7 +36,7 @@ public class LaptopPrint : MonoBehaviour {
         if (input.text == "y") {
           screenText.text = prompt + "y" + "\n" + enterPasswordPrompt + "\n" + ":>";
           Vector3 position = input.transform.localPosition;
-          position.y = 20;
+          position.y = 50;
           input.transform.localPosition = position;
           passwordPrompt = true;
         }
@@ -47,6 +50,11 @@ public class LaptopPrint : MonoBehaviour {
         if (input.text == "hunter2") {
           screenText.text = prompt + "y" + "\n" + enterPasswordPrompt + "\n" + ":>" + "\n" + "User authentication successful, printing document...";
           DisableInput();
+          closerLook.ZoomIn();
+          closerLook.ZoomOutAutomaticallyAfterDelay(2.0f);
+          printerPaper.speed = 0.2f;
+          enabled = false;
+          input.enabled = false;
         }
         else {
           screenText.text = prompt + "y" + "\n" + enterPasswordPrompt + "\n" + ":>" + "\n" + "Invalid password.";
