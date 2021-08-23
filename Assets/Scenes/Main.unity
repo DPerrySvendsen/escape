@@ -799,6 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightbulb: {fileID: 1449250891}
   selectableObject: {fileID: 143744201}
+  hiddenMessage: {fileID: 0}
 --- !u!114 &143744201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2386,6 +2387,7 @@ GameObject:
   - component: {fileID: 455217399}
   - component: {fileID: 455217398}
   - component: {fileID: 455217397}
+  - component: {fileID: 455217403}
   m_Layer: 0
   m_Name: Paper
   m_TagString: Untagged
@@ -2401,7 +2403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455217395}
   m_LocalRotation: {x: 0, y: 0.9935719, z: -0.11320323, w: 0}
-  m_LocalPosition: {x: 0, y: 0.085, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0.046, z: 0.098}
   m_LocalScale: {x: 0.30000004, y: 0.001, z: 0.40000004}
   m_Children: []
   m_Father: {fileID: 1271391317}
@@ -2438,7 +2440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a521199fb67c73b4f8e92f790316f4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTargetPosition: {x: 1.3, y: 1.55, z: -1.85}
+  cameraTargetPosition: {x: 1.3, y: 1.55, z: -1.9}
   cameraTargetRotation: {x: 70, y: 180, z: 10}
 --- !u!114 &455217399
 MonoBehaviour:
@@ -2452,7 +2454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b07fc71f3d4ae4aa5b8cb89a7ff976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: A coffee-stained report.
+  description: A mysterious printed document.
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2501,7 +2503,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb7f7bca24ae5db42b840096876cf2b2, type: 2}
+  - {fileID: 2100000, guid: ffb3697810765fc4ca1daffd7e4ae321, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2531,6 +2533,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455217395}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &455217403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455217395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14bc2014f826edb42ae21c9ebcf6196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialPrimary: {fileID: 2100000, guid: ffb3697810765fc4ca1daffd7e4ae321, type: 2}
+  materialSecondary: {fileID: 2100000, guid: 895999da479d94740a33b4d73775ffba, type: 2}
+  roomLight: {fileID: 1449250891}
+  uvLamp: {fileID: 1746827156}
 --- !u!1 &468077469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1004591016397366, guid: da357e76d65d042449b88c33e35ff8fd, type: 3}
@@ -4393,6 +4411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightbulb: {fileID: 1746827156}
   selectableObject: {fileID: 903194746}
+  hiddenMessage: {fileID: 0}
 --- !u!114 &903194746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7574,7 +7593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d551b55a0d32a42a54f152c912e5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passcode: 123
+  passcode: CA24A4
   door: {fileID: 468077471}
   buttonA: {fileID: 1101074488}
   buttonB: {fileID: 1116490933}
@@ -9656,6 +9675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightbulb: {fileID: 2126960460}
   selectableObject: {fileID: 1703068998}
+  hiddenMessage: {fileID: 0}
 --- !u!1001 &1705345580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10152,8 +10172,8 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.87032545, b: 0.7396226, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0, g: 0.033604145, b: 1, a: 1}
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 96
   m_InnerSpotAngle: 21.80208

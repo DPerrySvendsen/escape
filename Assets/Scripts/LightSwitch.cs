@@ -4,6 +4,7 @@ public class LightSwitch : MonoBehaviour {
 
   public Light lightbulb;
   public SelectableObject selectableObject;
+  public HiddenMessage hiddenMessage;
 
   public void Toggle () {
     lightbulb.enabled = !lightbulb.enabled;
