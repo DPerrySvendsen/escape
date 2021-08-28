@@ -12,7 +12,7 @@ public class LaptopPrint : MonoBehaviour {
   private bool isInteracting;
   private bool passwordPrompt;
 
-  private string enterPasswordPrompt = "Session timed out. Enter password to continue...";
+  private string enterPasswordPrompt = "Security mode enabled. Enter password to continue...";
 
   public void EnableInput () {
     input.ActivateInputField();
