@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour {
 
-  public Text text;
   public float fadeDuration;
 
+  private Text text;
   private float lastUpdate;
 
   public void Start () {
