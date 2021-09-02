@@ -16,12 +16,18 @@ public class CloserLook : MonoBehaviour {
     movementController.ZoomCameraTo(cameraTargetPosition, cameraTargetRotation);
   }
 
+  public bool IsFocused {
+    get {
+      return Camera.main.transform.position == cameraTargetPosition;
+    }
+  }
+
   public void ZoomOut () {
     movementController.ResetCamera();
   }
 
   public void Update () {
-    if (Camera.main.transform.position == cameraTargetPosition && Input.GetMouseButtonDown(1)) {
+    if (IsFocused && Input.GetMouseButtonDown(1)) {
       ZoomOut();
     }
   }

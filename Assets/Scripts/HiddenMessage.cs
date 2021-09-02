@@ -10,11 +10,11 @@ public class HiddenMessage : MonoBehaviour {
 
   private MeshRenderer meshRenderer;
 
-  private void Start () {
+  public void Start () {
     meshRenderer = GetComponent<MeshRenderer>();
   }
 
-  private void Update () {
+  public void Update () {
     meshRenderer.material = !roomLight.enabled && uvLamp.enabled ? materialSecondary : materialPrimary;
   }
 
