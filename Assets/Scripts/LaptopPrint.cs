@@ -8,11 +8,15 @@ public class LaptopPrint : MonoBehaviour {
   public Animator printerPaper;
   public CloserLook closerLook;
 
+  public string correctUsername;
+  public string correctPassword;
+
   private string prompt;
   private bool isInteracting;
-  private bool passwordPrompt;
+  private string username;
 
-  private string enterPasswordPrompt = "Security mode enabled. Enter password to continue...";
+  private bool passwordPrompt;
+  private bool resetPrompt;
 
   public void EnableInput () {
     input.ActivateInputField();
@@ -31,24 +35,20 @@ public class LaptopPrint : MonoBehaviour {
   }
 
   public void Update () {
-    if (Input.GetKeyDown(KeyCode.Return)) {
-      if (!passwordPrompt) {
-        if (input.text == "y") {
-          screenText.text = prompt + "y" + "\n" + enterPasswordPrompt + "\n" + ":>";
-          Vector3 position = input.transform.localPosition;
-          position.y = 50;
-          input.transform.localPosition = position;
-          passwordPrompt = true;
-        }
-        else if (input.text != "n")  {
-          screenText.text = prompt + "\n" + "Invalid command: " + input.text;
-        }
+    if (Input.GetKeyDown(KeyCode.Return) && (input.text != "" || resetPrompt)) {
+      if (!passwordPrompt && !resetPrompt) {
+        username = input.text;
+        screenText.text = prompt + username + "\n" + "Enter access code for user " + username + ": " + "\n" + ":>";
+        Vector3 position = input.transform.localPosition;
+        position.y = 50;
+        input.transform.localPosition = position;
         input.text = "";
+        passwordPrompt = true;
         EnableInput();
       }
       else {
-        if (input.text == "hunter2") {
-          screenText.text = prompt + "y" + "\n" + enterPasswordPrompt + "\n" + ":>" + "\n" + "User authentication successful, printing document...";
+        if (input.text == correctPassword && username == correctUsername) {
+          screenText.text = prompt + username + "\n" + "Enter access code for user " + username + ":" + "\n" + ":>" + "\n" + "User authentication successful, printing document...";
           DisableInput();
           closerLook.ZoomIn();
           closerLook.ZoomOutAutomaticallyAfterDelay(2.0f);
@@ -56,12 +56,20 @@ public class LaptopPrint : MonoBehaviour {
           enabled = false;
           input.enabled = false;
         }
-        else {
-          screenText.text = prompt + "y" + "\n" + enterPasswordPrompt + "\n" + ":>" + "\n" + "Invalid password.";
-          input.text = "";
-          EnableInput();
+        else if (resetPrompt) {
+          screenText.text = prompt;
+          Vector3 position = input.transform.localPosition;
+          position.y = 73;
+          input.transform.localPosition = position;
+          resetPrompt = false;
         }
-
+        else {
+          screenText.text = prompt + username + "\n" + "Enter access code for user " + username + ":" + "\n" + ":>" + "\n" + "Invalid access code or unauthorised user. Press enter to continue...";
+          username = "";
+          input.text = "";
+          passwordPrompt = false;
+          resetPrompt = true;
+        }
       }
     }
 

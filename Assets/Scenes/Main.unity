@@ -1172,6 +1172,8 @@ MonoBehaviour:
   input: {fileID: 1976072098}
   printerPaper: {fileID: 455217397}
   closerLook: {fileID: 1271391319}
+  correctUsername: s.alford
+  correctPassword: 2618
 --- !u!1 &120859566
 GameObject:
   m_ObjectHideFlags: 0
@@ -17232,9 +17234,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Secure Print Terminal 2019
+  m_Text: 'Secure Print Terminal 2019.b13.2
 
-    Print [1] pending document? (y/n)
+    [1] document pending. Enter username
+    to continue...
 
     :>'
 --- !u!222 &1872396808
