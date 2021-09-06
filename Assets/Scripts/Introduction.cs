@@ -6,6 +6,7 @@ using System.Collections;
 public class Introduction : MonoBehaviour {
 
   public string[] messages;
+  public SpriteRenderer controlsImage;
 
   private int index = 0;
   private Text textField;
@@ -19,7 +20,7 @@ public class Introduction : MonoBehaviour {
   public void Update () {
     if (canProgress && Input.GetMouseButtonDown(0)) {
       if (index == messages.Length) {
-        SceneManager.LoadScene("Main");
+        StartCoroutine(ShowControls());
       }
       else {
         StartCoroutine(FadeText(1.0f, 1.0f));
@@ -52,5 +53,27 @@ public class Introduction : MonoBehaviour {
     textField.color = colour;
 
     canProgress = true;
+  }
+
+  private IEnumerator ShowControls () {
+    float startTime = Time.time;
+    Color colour = textField.color;
+    canProgress = false;
+
+    while (Time.time < startTime + 1.0f) {
+      colour.a = (Time.time - startTime) / 1.0f;
+      controlsImage.color = colour;
+      yield return new WaitForFixedUpdate();
+    }
+    colour.a = 1;
+    controlsImage.color = colour;
+
+    yield return new WaitForSeconds(2);
+
+    while (!Input.GetMouseButtonDown(0)) {
+      yield return new WaitForFixedUpdate();
+    }
+    SceneManager.LoadScene("Main");
+
   }
 }
