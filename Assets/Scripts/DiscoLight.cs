@@ -3,6 +3,7 @@ using System.Collections;
 
 public class DiscoLight : MonoBehaviour {
 
+  public float changeRate;
   public Color[] colours;
 
   private Light lightScript;
@@ -15,7 +16,7 @@ public class DiscoLight : MonoBehaviour {
   public void Update () {
     if (coroutine == null) {
       coroutine = StartCoroutine(SetColour(
-        Random.Range(1.0f, 5.0f),
+        changeRate,
         colours[Random.Range(0, colours.Length)] 
       ));
     }

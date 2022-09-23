@@ -4,6 +4,7 @@ public class OpenDoor : MonoBehaviour {
 
   public Animator animatorDoorLeft;
   public Animator animatorDoorRight;
+  public GameObject discoLight;
 
   private CloserLook closerLook;
 
@@ -11,6 +12,7 @@ public class OpenDoor : MonoBehaviour {
     animatorDoorLeft.speed  = 0;
     animatorDoorRight.speed = 0;
     closerLook = GetComponent<CloserLook>();
+    discoLight.SetActive(false);
   }
 
   public void Open () {
@@ -22,5 +24,6 @@ public class OpenDoor : MonoBehaviour {
     animatorDoorRight.GetComponent<SelectableObject>().Description = description;
     animatorDoorLeft.speed  = 0.5f;
     animatorDoorRight.speed = 0.5f;
+    discoLight.SetActive(true);
   }
 }

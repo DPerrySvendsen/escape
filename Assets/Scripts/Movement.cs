@@ -5,13 +5,13 @@ public class Movement : MonoBehaviour {
 
   public bool  movementEnabled      = true;
   public float movementSpeed        = 5;
-  public float rotationSpeedX       = 5;
-  public float rotationSensitivityX = 0.5f;
-  public float rotationBoundsY      = 75;
-  public float rotationSmoothingY   = 0.05f;
+  public float rotationSensitivityX = 2f;
+  public float rotationSensitivityY = 2f;
 
-  public float mouseOffsetX;
-  public float mouseOffsetY;
+  public float minimumY = -60f;
+  public float maximumY = 60f;
+
+  float rotationY = 0F;
 
   private CharacterController characterController;
   private Coroutine cameraCoroutine;
@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour {
   };
 
   public void Start () {
-    characterController = GetComponent<CharacterController>();      
+    characterController = GetComponent<CharacterController>();
   }
 
   public void FixedUpdate () {
@@ -36,31 +36,11 @@ public class Movement : MonoBehaviour {
 
     characterController.Move(Input.GetAxis("Vertical")   * movementSpeed * Time.deltaTime * transform.forward);
     characterController.Move(Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime * transform.right);
-    mouseOffsetX = (Input.mousePosition.x - Screen.width  / 2) / Screen.width  * 2;
-    mouseOffsetY = (Input.mousePosition.y - Screen.height / 2) / Screen.height * 2;
-    
-    if (Mathf.Abs(mouseOffsetX) > rotationSensitivityX) {
-      mouseOffsetX = (mouseOffsetX - rotationSensitivityX * Mathf.Sign(mouseOffsetX)) * 2f;
-    }
-    else {
-      mouseOffsetX = 0;
-    }
 
-    transform.RotateAround(
-      transform.position,
-      transform.up,
-      mouseOffsetX * rotationSpeedX
-    );
+    transform.Rotate(0, Input.GetAxis("Mouse X") * rotationSensitivityX, 0);
 
-    Camera.main.transform.localEulerAngles = new Vector3(
-      Mathf.LerpAngle(
-        Camera.main.transform.localEulerAngles.x,
-        -mouseOffsetY * rotationBoundsY,
-        rotationSmoothingY
-      ),
-      0.0f,
-      0.0f
-    );
+    rotationY = Mathf.Clamp(rotationY + (Input.GetAxis("Mouse Y") * rotationSensitivityY), minimumY, maximumY);
+    Camera.main.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
   }
 
   public void ZoomCameraTo (Vector3 targetCameraPosition, Vector3 targetCameraRotation) {
@@ -75,7 +55,7 @@ public class Movement : MonoBehaviour {
     if (cameraCoroutine != null) {
       StopCoroutine(cameraCoroutine);
     }
-    cameraCoroutine = StartCoroutine(ZoomCameraTo(SpaceType.Local, Vector3.zero, Vector3.zero, 0.5f));
+    cameraCoroutine = StartCoroutine(ZoomCameraTo(SpaceType.Local, Vector3.zero, new Vector3(-rotationY, 0, 0), 0.5f));
   }
 
   private void SetPositionInSpace (SpaceType spaceType, Transform transform, Vector3 position, Vector3 rotation) {
